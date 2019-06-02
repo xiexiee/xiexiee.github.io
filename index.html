@@ -275,6 +275,75 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-analysis" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/06/02/analysis/" class="article-date">
+      <time datetime="2019-06-02T04:34:56.011Z" itemprop="datePublished">2019-06-02</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="POWER-BI系统使用之数据集构建器"><a href="#POWER-BI系统使用之数据集构建器" class="headerlink" title="POWER BI系统使用之数据集构建器"></a><center>POWER BI系统使用之数据集构建器</center></h1><h2 id="前言"><a href="#前言" class="headerlink" title=" 前言"></a><font color="#238a8a"> 前言</font></h2><p>&nbsp;&nbsp;&nbsp;&nbsp; <font size="4" color="black" face="4">昨天周六，下午回学校有种是周日的错觉，以至于觉得今天是多出来的休息日，开心~hahaha~<br><br>&nbsp;&nbsp;&nbsp;&nbsp; 今天要写的内容是临时想到的，原计划写的文我就不立flag了，该它出来的时候它就会出来了…随缘随缘。（话唠本唠）<br><br>&nbsp;&nbsp;&nbsp;&nbsp; 一些人在刚使用POWER BI奥威的时候，界面上很多名词会有些不太了解，所以今天就写一写名词的解释，只有了解了才能更好的使用它，对吧？对！下面以导入EXCEL表作为例子。</font></p>
+<h2 id="目录"><a href="#目录" class="headerlink" title=" 目录"></a><font color="#238a8a"> 目录</font></h2><font face="黑体" color="#ca3fa1" size="4"><br><br>- <a href="#jump1">登录界面</a><br>- <a href="#jump2">设计界面</a><br>- <a href="#jump8">小结</a><br></font>
+
+<h2 id="正文"><a href="#正文" class="headerlink" title=" 正文"></a><font color="#238a8a"> 正文</font></h2><font color="black"><br>1. <span id="jump1">登录界面 </span><br><center><img src="https://raw.githubusercontent.com/xiexiee/xiexiee.github.io/xiexiee-patch-1/img/2019-06-02-1.jpg" alt></center><br><br>&nbsp;&nbsp;&nbsp;&nbsp; 按顺序，第一个当然是登录界面了。要讲的就三个：<br><br>&nbsp;&nbsp;&nbsp;&nbsp; <font color="purple">- 浏览：</font>以浏览者模式进去后只能查看报表，而不能编辑修改。即<font color="green">只读</font>。同游客模式。<br><br>&nbsp;&nbsp;&nbsp;&nbsp; <font color="purple">- 开发：</font>当你的目的是要自己创建报表，那就要勾选开发，进去后就可以自己创建报表，即<font color="green">可读可写</font>。<br><br>&nbsp;&nbsp;&nbsp;&nbsp; <font color="purple">- 菜单发布：</font>菜单发布是设置报表权限的一种方式。<br><center><img src="https://raw.githubusercontent.com/xiexiee/xiexiee.github.io/xiexiee-patch-1/img/2019-06-02-2.jpg" alt></center><br><center><img src="https://raw.githubusercontent.com/xiexiee/xiexiee.github.io/xiexiee-patch-1/img/2019-06-02-3.jpg" alt></center><br><br>它的设置是大格局的设置，例如当涉及到多个用户使用时，就要给他们划分权限，A可以看到报表aa、bb，而B只能看报表aa。（注意具体能看到报表里的哪些内容要在编辑视图里设置好，这时的设置是更加具体而细致的。）又或者可以设置报表的排列次序等等…只是作为初始学习的话，目前不用太深究。<br><br>2. <span id="jump2">设计界面 </span><br><center><img src="https://raw.githubusercontent.com/xiexiee/xiexiee.github.io/xiexiee-patch-1/img/2019-06-02-4.jpg" alt></center><br><font color="#f2d46b" face="黑体"><br>“ 1：数据集构建器:是系统的核心部件，为了满足多变的数据分析需求，它具备强大的功能，这里包括数据分析时用到的各区域，分别包汇总区域、行维度区域、列维度区域、排序区与筛选区域。下面会详细说明。<br><br>2: 工具栏：主要用于添加图表对象（切换图表对象），保存及浏览报表，添加筛选条件，属性总体设置。<br><br>3：报表的属性内容，主要包括面板的属性和各个图表对象各自的属性。<br><br>4：报表展现区域：相关的图表对象将会在这显示。”<br></font>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;今天主要讲讲数据集构建器<br></p>
+<ul>
+<li><a href="#jump3">结果集</a> </li>
+<li><a href="#jump4">数据集</a></li>
+<li><a href="#jump5">汇总</a></li>
+<li><a href="#jump6">维度</a></li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; <font color="purple"><span id="jump3">结果集：</span></font>原来叫视图。你所需要的数据就来源于在结果集中选中的表<br></p>
+<p><center><img src="https://raw.githubusercontent.com/xiexiee/xiexiee.github.io/xiexiee-patch-1/img/2019-06-02-5.jpg" alt></center><br><br>&nbsp;&nbsp;&nbsp;&nbsp; <font color="purple"><span id="jump4">数据集：</span></font>每新建一个图表就会产生一个数据集。显示的名字就是你当前选中的图表名<br></p>
+<p><center><img src="https://raw.githubusercontent.com/xiexiee/xiexiee.github.io/xiexiee-patch-1/img/2019-06-02-6.jpg" alt></center><br><br>&nbsp;&nbsp;&nbsp;&nbsp; <font color="purple"><span id="jump5">汇总：</span></font>顾名思义就是数据整合，例如勾选收入，它就会将收入进行汇总。注意前面的小图标T表示text型数据，Z是表示是数值型的数据，只有选中前面为Z的才可以进行数据的汇总。</p>
+<p><center><img src="https://raw.githubusercontent.com/xiexiee/xiexiee.github.io/xiexiee-patch-1/img/2019-06-02-7.jpg" alt></center><br><br>继续看到，点击收入旁边的三条线，可以对收入进行更具体的设置<br></p>
+<p><center><img src="https://raw.githubusercontent.com/xiexiee/xiexiee.github.io/xiexiee-patch-1/img/2019-06-02-9.jpg" alt></center><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font face="黑体">聚合(总和)：</font>表示你要以什么数据来显示。收入的总和还是收入的平均值等等<br></p>
+<p><center><img src="https://raw.githubusercontent.com/xiexiee/xiexiee.github.io/xiexiee-patch-1/img/2019-06-02-10.jpg" alt></center><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font face="黑体">同期：</font>这里会添加新的字段，这个字段是与其他某个时期进行对比，例如选中年和-1，表示数据与对应的去年进行对比，月和-1就是和上个月比较。负数表之前，正数表之后。<br></p>
+<p><center><img src="https://raw.githubusercontent.com/xiexiee/xiexiee.github.io/xiexiee-patch-1/img/2019-06-02-11.jpg" alt></center><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face="黑体">占比与总占比：</font>占比大家都知道，就是所占的比例呗。那划分占比与总占比干嘛？以行为例，我们将原来的表修改一下，在行维度中同时勾选门店和月，这样就是以行划分每个门店每月的收入。<strong><em>行占比</em></strong>就是具体某个门店它十二个月每个月的占比，门店之间是独立的。<strong><em>行总占比</em></strong>则是在所有门店的月份上进行的占比分析。<br></p>
+<p><center><img src="https://raw.githubusercontent.com/xiexiee/xiexiee.github.io/xiexiee-patch-1/img/2019-06-02-12.jpg" alt></center><br></p>
+<p><center><img src="https://raw.githubusercontent.com/xiexiee/xiexiee.github.io/xiexiee-patch-1/img/2019-06-02-13.jpg" alt></center><br><br>&nbsp;&nbsp;&nbsp;&nbsp; <font color="purple"><span id="jump6">纬度：</span></font>这里将行列维度放一起讲。通俗点就是以按行按列来划分显示对应的数据。例如想看每个门店的收入，就在行维度上勾选门店，每行就显示一个门店。如果再想看每个门店每月的收入，那就在列维度上勾选月份，这样每列显示的就是每个月门店的收入。列间距可以通过将鼠标移到边缘部分拖动修改。行列维度是可以互换的，在左下角。</p>
+<p><center><img src="https://raw.githubusercontent.com/xiexiee/xiexiee.github.io/xiexiee-patch-1/img/2019-06-02-8.jpg" alt></center><br></p>
+<ol start="3">
+<li><span id="jump8">小结</span><br><br>&nbsp;&nbsp;&nbsp;&nbsp;这部分主要的这些啦，其他没写的都比较容易理解（除了预测值），什么重命名、删除、排序、排名之类的，可以试一试看看效果。<br></li>
+</ol>
+</font>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-browingInterface1" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
